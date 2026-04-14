@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taxi & Sightseeing Pricing</title>
+
+<style>
+body{
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg,#1e3c72,#2a5298);
+    margin:0;
+    padding:0;
+    color:white;
+}
+
+h1, h2{
+    text-align:center;
+    letter-spacing:1px;
+}
+
+h1{
+    padding:40px 0;
+    font-size:40px;
+}
+
+h2{
+    margin-top:60px;
+    font-size:32px;
+}
+
+.pricing-box, .sightseeing-box{
+    width:80%;
+    margin:40px auto;
+    background:white;
+    color:black;
+    border-radius:12px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    text-align:center;
+    margin-top:20px;
+}
+
+th{
+    background:#ffc107;
+    padding:14px;
+    font-size:18px;
+}
+
+td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+}
+
+table tr:nth-child(even){
+    background:#f9f9f9;
+}
+
+tr:hover{
+    background:#fff3cd;
+    transition:0.3s;
+}
+
+.price{
+    font-weight:bold;
+    color:#2a5298;
+}
+
+/* Buttons */
+.book-btn{
+    display:block;
+    width:220px;
+    margin:20px auto;
+    text-align:center;
+    padding:12px;
+    background:#ffc107;
+    color:black;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.book-btn:hover{
+    background:#ffb300;
+    transform:scale(1.05);
+}
+
+.whatsapp-btn{
+    display:block;
+    width:220px;
+    margin:10px auto;
+    text-align:center;
+    padding:12px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.whatsapp-btn:hover{
+    background:#1ebe5d;
+    transform:scale(1.05);
+}
+</style>
+</head>
+<body>
+
+<h2>Mussoorie Sightseeing Packages</h2>
+
+<div class="sightseeing-box">
+<table>
+<tr>
+<th>Places Covered</th>
+<th>Sedan Price (Including App Charges)</th>
+<th>SUV Price (Including App Charges)</th>
+</tr>
+
+<tr>
+<td>
+Kempty Fall <br>
+Company Garden <br>
+Budha Mandir <br>
+Dalai Hills <br>
+Santala Mata Mandir
+</td>
+<td class="price">₹3300</td>
+<td class="price">₹4300</td>
+</tr>
+
+<tr>
+<td>
+Dhanolty <br>
+Surkanda Mata <br>
+Burans Khanda <br>
+Lal Tibba
+</td>
+<td class="price">₹4300</td>
+<td class="price">₹4800</td>
+</tr>
+</table>
+
+<!-- Buttons -->
+<a href="/booking/" class="book-btn">Book This Ride 🚖</a>
+<a href="https://wa.me/917895228220?text=Hi, I want to book a sightseeing taxi in Mussoorie" 
+class="whatsapp-btn">Book on WhatsApp 📲</a>
+</div>
+
+<h1>Taxi Pricing (From Mussoorie)</h1>
+
+<div class="pricing-box">
+<table>
+<tr>
+<th>Destination</th>
+<th>Price (Including App Charges)</th>
+</tr>
+
+<tr><td>Jolly Grant (Airport)</td><td class="price">₹2800</td></tr>
+<tr><td>Railway Station</td><td class="price">₹1800</td></tr>
+<tr><td>Dehradun (ISBT)</td><td class="price">₹1400</td></tr>
+<tr><td>Haridwar</td><td class="price">₹2000</td></tr>
+<tr><td>Rishikesh</td><td class="price">₹2800</td></tr>
+<tr><td>Delhi</td><td class="price">₹6300</td></tr>
+<tr><td>Chandigarh</td><td class="price">₹6300</td></tr>
+<tr><td>Shimla</td><td class="price">₹7800</td></tr>
+<tr><td>Nainital</td><td class="price">₹3300</td></tr>
+</table>
+
+<!-- Buttons -->
+<a href="/booking/" class="book-btn">Book Taxi Now 🚖</a>
+<a href="https://wa.me/917895228220?text=Hi, I want to book a taxi from Mussoorie" 
+class="whatsapp-btn">Book on WhatsApp 📲</a>
+</div>
+
+<a href="/" class="book-btn">Back to Home</a>
+
+</body>
+</html>

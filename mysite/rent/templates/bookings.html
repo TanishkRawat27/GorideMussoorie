@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Your Ride</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+background: linear-gradient(120deg,#1e3c72,#2a5298);
+margin:0;
+padding:0;
+}
+
+/* Booking Section */
+
+#booking{
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+}
+
+/* Booking Card */
+
+.booking-box{
+background:white;
+padding:40px;
+width:350px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+text-align:center;
+}
+
+.booking-box h2{
+margin-bottom:20px;
+}
+
+/* Inputs */
+
+input{
+width:100%;
+padding:10px;
+margin:8px 0;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
+/* Labels */
+
+label{
+display:block;
+text-align:left;
+margin-top:10px;
+font-weight:bold;
+}
+
+/* Button */
+
+.book-btn{
+width:100%;
+padding:12px;
+margin-top:15px;
+background:#ffc107;
+border:none;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.book-btn:hover{
+background:#ffb300;
+transform:scale(1.03);
+}
+
+/* Success message */
+
+#msg{
+display:none;
+padding:12px;
+margin-bottom:15px;
+background:#d4edda;
+color:#155724;
+border-radius:8px;
+}
+
+</style>
+</head>
+
+<body>
+
+<section id="booking">
+
+<div class="booking-box">
+
+<h2>Book Your Ride 🚖</h2>
+
+<div id="msg">
+Booking Successful ✅
+</div>
+
+<form id="bookingForm" method="POST">
+
+{% csrf_token %}
+
+<input type="text" name="name" placeholder="Enter Name" required>
+
+<input type="email" name="email" placeholder="Enter Email" required>
+
+<input type="text" name="phone" placeholder="Enter Phone Number" required>
+
+<h4>Select Vehicles</h4>
+
+<label>Number of Cars</label>
+<input type="number" name="car_quantity" min="0" value="0" required>
+
+<label>Number of Scooties</label>
+<input type="number" name="scooty_quantity" min="0" value="0" required>
+<input type="text" name="location" placeholder="Pickup Location" required>
+
+<input type="text" name="drop" placeholder="Drop Location" required>
+
+<button type="submit" class="book-btn">Book Now</button>
+
+</form>
+
+</div>
+
+</section>
+
+<script>
+
+const form = document.getElementById("bookingForm");
+
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let name = form.name.value;
+    let email = form.email.value;
+    let phone = form.phone.value;
+    let car = form.car_quantity.value;
+    let scooty = form.scooty_quantity.value;
+    let location = form.location.value;
+    let drop = form.drop.value;
+
+    let message = `🚖 New Booking
+
+Name: ${name}
+Phone: ${phone}
+Cars: ${car}
+Scooty: ${scooty}
+Pickup: ${location}
+Drop: ${drop}`;
+
+    let encodedMessage = encodeURIComponent(message);
+
+    let whatsappURL = `https://wa.me/917895228220?text=${encodedMessage}`;
+
+    window.open(whatsappURL, "_blank");
+});
+
+</script>
+</body>
+</html>
+
